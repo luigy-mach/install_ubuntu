@@ -1,0 +1,116 @@
+#screenshot
+sudo apt-get install shutter 
+
+#unrar
+sudo apt-get install unrar
+
+#vim editor
+sudo apt-get install vim
+
+
+#clean apt-get
+sudo apt-get clean
+cd /var/lib/apt
+sudo mv lists lists.old
+sudo mkdir -p lists/partial
+sudo apt-get clean
+sudo apt-get update
+
+
+#reparador de grub
+sudo add-apt-repository ppa:yannubuntu/boot-repair
+sudo apt-get update
+sudo apt-get install -y boot-repair && boot-repair
+
+#ip-scan -l
+sudo apt-get install arp-scan
+
+#kile-latex
+sudo apt-get install kile texlive-latex-recommended texlive-latex-extra preview-latex-style texlive-pictures
+
+#Install Atom in Ubuntu (32bit + 64bit) via PPA
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update
+sudo apt-get install atom
+sudo apt-get install git
+
+sudp apm install atom-typescript
+sudo apm install project-manager
+sudo apm install jumpy
+
+
+
+
+
+#node 
+sudo apt-get install nodejs
+sudo apt-get install npm
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+
+#install git
+sudo apt-get install git
+
+#install ant
+sudo apt-get install ant
+
+#install ç	
+npm install -g cordova ionic
+
+
+#http://stackoverflow.com/questions/31041366/how-to-install-ionic-framework-on-ubuntu
+# mean.io
+sudo apt-get install npm
+sudo npm install -g mean-cli 
+sudo ln -s /usr/bin/nodejs /usr/bin/node
+sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+//sudo npm install -g express
+sudo apt-get install node-express-generator
+sudp npm install -g express-generator
+
+
+
+
+
+#qt-creator
+sudo add-apt-repository ppa:ubuntu-sdk-team/ppa
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install qtcreator
+
+#postgresSQL
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+
+#android-studio
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+sudo apt-get install oracle-java8-set-default
+
+sudo add-apt-repository ppa:paolorotolo/android-studio
+sudo apt-get update
+sudo apt-get install android-studio
+
+sudo apt-get install qemu-kvm
+//Enable Virtualization Technology in BIOS
+sudo kvm-ok
+
+#Installing KVM
+egrep -c '(svm|vmx)' /proc/cpuinfo
+sudo apt-get install qemu-kvm libvirt-bin bridge-utils virt-manager
+sudo apt-get install qemu-kvm libvirt-bin ubuntu-vm-builder bridge-utils
+ sudo adduser $(whoami) kvm
+ sudo adduser $(whoami) libvirtd
+sudo virsh -c qemu:///system list
+
+#correccion-errores-android
+sudo apt-get update && sudo apt-get install mesa-utils
+sudo usermod -aG video $(whoami)
+
+
+
+
+
+
+
+
